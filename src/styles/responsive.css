@@ -1,0 +1,121 @@
+.content-section{
+    display: grid;
+    grid-row-gap: 16px;
+    grid-template-columns: 1fr;
+}
+
+
+
+@media screen and (max-width:545px) {
+  .content-section, #detail-resto, .content-profile{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 16px;
+    margin: 30px;
+  }
+  .review{
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+  }
+  .resto-name{
+    font-size: 30px;
+    font-weight: 200;
+    margin-top: 30px;
+  }
+
+  .resto-img {
+    margin-top: -10px;
+  }
+
+  #detail-resto{
+    font-size: 10px;
+  }
+
+  .nav {
+    background-color: #002B5B;
+    width: 100%;
+    position: absolute;
+    margin-top: 255px;
+
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-700px, 0);
+    transform: translate(-700px, 0);
+
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
+  }
+
+  .open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .nav-item {
+    display: list-item;
+    border-bottom: 1px solid #E0E0E0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .header-title{
+    font-size: 20px;
+  }
+
+}
+
+@media screen and (min-width: 546px) {
+  .content-div {
+    padding: 10px 10px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .content-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 20px;
+  }
+
+  #menu {
+    display: none;
+  }
+
+}
+
+
+@media screen and (min-width: 700px) {
+  .content-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 16px;
+  }
+
+
+}
+
+
+@media screen and (min-width:900px) {
+  .content-section {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+
+@media screen and (min-width:1200px) {
+  .content {
+    max-width: 1200px;
+  }
+
+  .hero {
+    min-width: 1000px;
+  }
+}

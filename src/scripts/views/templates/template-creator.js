@@ -8,7 +8,7 @@ const DetailRestoTemplate = (resto) => `
     <img class="resto-img" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="This is a best restaurants and you can go here" />
     <div class="custReview">
       <h4>Customer Review</h4>
-      ${resto.customerReviews.map((review) => `
+      ${resto.customerReviews.map((review) =>`
       <p class="reviewer-name">Nama : ${review.name}</p>
       <p class="review">Review : ${review.review}</p>
       <p>Tanggal : ${review.date}</p>
@@ -54,7 +54,7 @@ const createLikeButtonTemplate = () => `
 `;
 
 const createUnlikeButtonTemplate = () => `
-  <button aria-label="unlike if you don't like this restaurants" id="likeButton" class="like">
+  <button aria-label="unlike if you dont like this restaurants" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;

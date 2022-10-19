@@ -4,7 +4,7 @@
 /* eslint-disable new-cap */
 import UrlParser from '../../routes/url-parser';
 import TheRestoDbSource from '../../data/therestodb-source';
-import { DetailRestoTemplate } from '../templates/template-creator';
+import {DetailRestoTemplate} from '../templates/template-creator';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const Detail = {
@@ -45,7 +45,7 @@ const Detail = {
     const inputReview = document.querySelector('#review');
     const buttonSubmit = document.querySelector('#submit');
 
-    buttonSubmit.addEventListener('click', () => {
+    buttonSubmit.addEventListener('click', function() {
       const review = {
         id: url.id,
         name: inputName.value,
@@ -61,3 +61,4 @@ const Detail = {
 };
 
 export default Detail;
+

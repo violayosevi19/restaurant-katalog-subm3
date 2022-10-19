@@ -1,16 +1,16 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable max-len */
 import FavoritesResto from '../data/favorites-resto';
-import { createLikeButtonTemplate, createUnlikeButtonTemplate } from '../views/templates/template-creator';
+import {createLikeButtonTemplate, createUnlikeButtonTemplate} from '../views/templates/template-creator';
 const LikeButtonInitiator = {
-  async init({ likeButtonContainer, resto }) {
+  async init({likeButtonContainer, resto}) {
     this._likeButtonContainer = likeButtonContainer;
     this._resto = resto;
 
     await this._renderButton();
   },
   async _renderButton() {
-    const { id } = this._resto;
+    const {id} = this._resto;
 
     if (await this._isRestoExist(id)) {
       this._renderUnlike();
